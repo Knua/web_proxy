@@ -29,7 +29,7 @@ void relay(int recvfd, int sendfd){
 			break;
 		}
 		buf[received] = '\0';
-		printf("Received Msg from %d\n  %s\n", recvfd, buf);
+		printf("Received Msg from %d\n%s\n", recvfd, buf);
 
 		if (send(sendfd, buf, strlen(buf), 0) == 0) {
 			perror("send failed");
